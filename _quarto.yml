@@ -2,14 +2,21 @@ project:
   type: website
 
 website:
-  title: "Tidy Tuesday"
+  title: "Prasaath's Blog"
+  image: me.png
+  favicon: me.png
   navbar:
+    logo: me.png
+    pinned: true
     right:
-      - about.qmd
+      - href: https://prasaath-sastha.github.io/
+        text: About me
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        text: Github
+        href: https://github.com/prasaath-sastha
+      - icon: linkedin
+        text: Linkedin
+        href: https://www.linkedin.com/in/prasaathsastha/
 format:
   html:
     theme: cosmo

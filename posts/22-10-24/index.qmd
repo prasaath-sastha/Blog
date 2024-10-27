@@ -242,7 +242,7 @@ p2
 cia_internet_data <- world |> 
   left_join(top10, by = c("name" = "country"))
 
-map_cia(cia_internet_data, internet_users_per_square_Km, title = "Internet users per square Kilometer", value = "Number of People")
+map_cia(cia_internet_data, internet_users_per_square_Km, title = "Internet users per square Kilometer", value = "Number of People") 
 map_cia(cia_internet_data, percent_internet_users, title = "Percentage of Internet Users", value = "%")
 
 ```
