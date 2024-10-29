@@ -78,9 +78,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -208,18 +208,18 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Tidy Tuesday,code,analysis" data-listing-date-sort="1729638000000" data-listing-file-modified-sort="1730044096101" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1659">
+<div class="quarto-post image-right" data-index="0" data-categories="Tidy Tuesday,code,analysis" data-listing-date-sort="1729641600000" data-listing-file-modified-sort="1730201640560" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1658">
 <div class="thumbnail">
 <p><a href="./posts/22-10-24/index.html" class="no-external"></a></p><a href="./posts/22-10-24/index.html" class="no-external">
-<p class="card-img-top"><img src="posts\22-10-24\index_files\figure-html\fig-boxplots-1.png"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img src="posts/22-10-24/index_files/figure-html/fig-boxplots-1.png"  class="thumbnail-image card-img"/></p>
 </a><p><a href="./posts/22-10-24/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/22-10-24/index.html" class="no-external">Tidy Tuesday - 22OCT2024</a>
+<a href="./posts/22-10-24/index.html" class="no-external">The CIA World Factbook</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/22-10-24/index.html" class="no-external"></a>
+<a href="./posts/22-10-24/index.html" class="no-external">Tidy Tuesday | Week 43 | 22-10-2024</a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Tidy Tuesday'); return false;">
@@ -344,7 +344,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/prasaath-sastha\.github\.io\/Blog\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

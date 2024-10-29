@@ -9,7 +9,7 @@
 <meta name="author" content="Prasaath Sastha">
 <meta name="dcterms.date" content="2024-10-23">
 
-<title>Tidy Tuesday - 22OCT2024 – Prasaath’s Blog</title>
+<title>Tidy Tuesday - 22OCT2024 – Prasaath's Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -153,6 +153,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Tidy Tuesday - 22OCT2024</h1>
+            <p class="subtitle lead">Tidy Tuesday | Week 43 | 22-10-2024</p>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Tidy Tuesday</div>
                 <div class="quarto-category">code</div>
@@ -218,7 +219,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># This is a collection of packages that is used for data exploration, wrangling and plotting.</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidytuesdayR) <span class="co"># This package is used to connect to the tidy Tuesday repo for the data</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Library that plays a hige role in improving test plot aesthetics</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Library that plays a huge role in improving test plot aesthetics</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glue) </span>
@@ -279,8 +280,8 @@ $ population_growth_rate  &lt;dbl&gt; -0.03, 0.76, 0.77, 0.44, 0.80, 1.09, 1.25,
 <table class="caption-top table">
 <colgroup>
 <col style="width: 26%">
-<col style="width: 20%">
-<col style="width: 52%">
+<col style="width: 23%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -749,7 +750,7 @@ Note
 <span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>cia_internet_data <span class="ot">&lt;-</span> world <span class="sc">|&gt;</span> </span>
 <span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(top10, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"name"</span> <span class="ot">=</span> <span class="st">"country"</span>))</span>
 <span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a><span class="fu">map_cia</span>(cia_internet_data, internet_users_per_square_Km, <span class="at">title =</span> <span class="st">"Internet users per square Kilometer"</span>, <span class="at">value =</span> <span class="st">"Number of People"</span>)</span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a><span class="fu">map_cia</span>(cia_internet_data, internet_users_per_square_Km, <span class="at">title =</span> <span class="st">"Internet users per square Kilometer"</span>, <span class="at">value =</span> <span class="st">"Number of People"</span>) </span>
 <span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a><span class="fu">map_cia</span>(cia_internet_data, percent_internet_users, <span class="at">title =</span> <span class="st">"Percentage of Internet Users"</span>, <span class="at">value =</span> <span class="st">"%"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
@@ -900,7 +901,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/prasaath-sastha\.github\.io\/Blog\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
