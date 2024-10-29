@@ -74,7 +74,7 @@ If it is a categorical variable, i always check for duplicates, and similar name
 #### Data Dictionary from the CIA factbook data set
 
 | variable | class | description |
-|-------------------|------------------|-----------------------------------|
+|----|----|----|
 | country | integer | Name of the country (factor with 259 levels). |
 | area | integer | Total area of the country (in square kilometers). |
 | birth_rate | double | Birth rate (number of live births per 1,000 people). |
