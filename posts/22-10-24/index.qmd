@@ -5,6 +5,7 @@ title: "The CIA World Factbook"
 subtitle: "Tidy Tuesday | Week 43 | 22-10-2024"
 categories: [Tidy Tuesday, code, analysis]
 code-fold: show
+image: fig-ttanswer-4.png
 ---
 
 ::: {.callout-note appearance="simple"}
