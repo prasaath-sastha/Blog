@@ -9,4 +9,8 @@ listing:
   filter-ui: false
 page-layout: full
 title-block-banner: true
+keywords: ["Prasaath Sastha", "Prasaath Sastha Kuppan Ravi", "R Blogs", "Prasaath Sastha Blogs"]
+format: 
+  html: 
+    include-in-header: head.html
 ---
