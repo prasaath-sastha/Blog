@@ -1,0 +1,88 @@
+---
+author: "Prasaath Sastha"
+date: "16 NOV 2024"
+title: "Interactive World Plot"
+subtitle: "Tidy Tuesday | Week 45 | 12-11-2024"
+categories: [Tidy Tuesday, code, analysis]
+code-fold: show
+---
+
+# An attempt on creating an interactive plot
+
+This week’s **Tidy Tuesday** challenge (2024-11-12) provided an excellent opportunity to explore country datasets through the lens of ISO Alpha-3 and numeric codes. Using the `countries` dataset from the repository, I created a clean and interactive world map visualization that showcases the geographic and numeric diversity of nations. Below, I walk you through the process and the insights gained.
+
+### **Dataset Overview**
+
+The dataset includes three main components:
+
+1.  **Countries**: Information on modern countries, including ISO codes (Alpha-2, Alpha-3, and numeric), names, and additional metadata.
+
+2.  **Country Subdivisions**: Details about smaller administrative regions within countries.
+
+3.  **Former Countries**: Historical countries that no longer exist, offering a fascinating look at geopolitical changes.
+
+For this visualization, I focused on the **`countries`** dataset to build an interactive map.
+
+### **The Visualization**
+
+The goal was to highlight how ISO Alpha-3 codes and numeric codes can help represent countries visually. Using the `plotly` library, I created an **interactive choropleth map**. Each country is shaded based on its numeric ISO code, with hoverable tooltips providing details such as the country name.
+
+Key features of the map include:
+
+-   **ISO Alpha-3 Codes**: These codes are used to pinpoint countries on the map.
+
+-   **Color-Free Design**: To keep the map simple and focused, I disabled the color legend, ensuring the visualization remains clean and distraction-free.
+
+-   **Custom Layout**: The map uses an equirectangular projection with clean coastlines and unobtrusive white borders for better readability.
+
+```{r}
+#| warning: false
+
+library(tidyverse)
+library(tidytuesdayR)
+library(countries)
+library(ggtext)
+library(showtext)
+library(glue)
+library(plotly)
+
+# Loading the data from TT repo
+
+tuesdata <- tt_load("2024-11-12")
+
+countries <- tuesdata$countries
+country_subdiv <- tuesdata$country_subdivisions
+former_countries <- tuesdata$former_countries
+
+
+title <- "Global Interactive Visualization of Countries Using ISO Alpha-3 Codes and Numeric Codes"
+
+
+quick_map(data = countries, plot_col = "numeric")
+
+map <- plot_ly(
+  type = 'choropleth',
+  locations = countries$alpha_3,  
+  z = countries$numeric,          
+  text = countries$name,        
+  colorscale = '', 
+  showscale = FALSE,
+  marker = list(line = list(color = 'white', width = 0.5))
+)
+
+# Layout adjustments
+map <- map %>%
+  layout(
+    title = "Global Interactive Visualization of Countries Using 
+    ISO Alpha-3 Codes and Numeric Codes",
+    geo = list(
+      projection = list(type = 'equirectangular'),
+      showcoastlines = TRUE,
+      coastlinecolor = "black",
+      showframe = FALSE
+    )
+  )
+
+
+map
+```
