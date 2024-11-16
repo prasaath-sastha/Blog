@@ -74,7 +74,7 @@ If it is a categorical variable, i always check for duplicates, and similar name
 #### Data Dictionary from the CIA factbook data set
 
 | variable | class | description |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | country | integer | Name of the country (factor with 259 levels). |
 | area | integer | Total area of the country (in square kilometers). |
 | birth_rate | double | Birth rate (number of live births per 1,000 people). |
@@ -249,3 +249,13 @@ map_cia(cia_internet_data, percent_internet_users, title = "Percentage of Intern
 ```
 
 To answer the questions for this tidy tuesday challenge we have computed 2 variables using the data provided in the CIA fact book. From which we can see the top 10 countries with highest number of internet users per square kilometer and countries with highest internet user percentage.
+
+```{=html}
+<script src="https://utteranc.es/client.js"
+        repo="prasaath-sastha/blog_comments"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+```
