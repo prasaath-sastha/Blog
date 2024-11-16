@@ -5,6 +5,7 @@ title: "Interactive World Plot"
 subtitle: "Tidy Tuesday | Week 45 | 12-11-2024"
 categories: [Tidy Tuesday, code, analysis]
 code-fold: show
+image: newplot.png
 ---
 
 # An attempt on creating an interactive plot
